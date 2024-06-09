@@ -7,11 +7,11 @@ export default function Login() {
   const pass = useRef();
   const navigasi = useNavigate();
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     navigasi("/");
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigasi("/");
+    }
+  }, []);
 
   async function handleLogin(e) {
     e.preventDefault();

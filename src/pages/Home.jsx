@@ -24,6 +24,7 @@ export default function Home() {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     try {
       await axios.post("http://127.0.0.1:8000/api/keluar");
+      localStorage.removeItem("token");
       navigasi("/login");
     } catch (err) {
       console.error(err);
